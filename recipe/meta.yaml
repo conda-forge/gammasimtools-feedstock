@@ -7,7 +7,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/gammasimtools-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/gammasimtools-{{ version }}.tar.gz
   sha256: 6016c2aa7d01dd151cb18f5ec7fb5683e92449307c067490a8aee5771f02e719
 
 build:
