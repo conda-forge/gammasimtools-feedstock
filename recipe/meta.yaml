@@ -56,7 +56,6 @@ requirements:
     - python >={{ python_min }}
     - astropy-base
     - boost-histogram
-    - ctao-dpps-cosmic-ray-spectra
     - ctapipe-base
     - eventio
     - jsonschema
@@ -70,6 +69,8 @@ requirements:
     - pytest
     - scipy
     - toml
+    - pip:
+       - ctao-dpps-cosmic-ray-spectra
 
 test:
   imports:
