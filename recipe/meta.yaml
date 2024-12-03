@@ -56,15 +56,18 @@ requirements:
     - python >={{ python_min }}
     - astropy-base
     - boost-histogram
+    - ctao-dpps-cosmic-ray-spectra
     - ctapipe-base
     - eventio
     - jsonschema
     - matplotlib-base
     - numpy
+    - particle
     - pymongo
     - pyproj
     - python-dotenv
     - pyyaml
+    - pytest
     - scipy
     - toml
 
