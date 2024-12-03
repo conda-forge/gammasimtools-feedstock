@@ -40,7 +40,7 @@ build:
 
 requirements:
   host:
-    - python >={{ python_min }}
+    - python {{ python_min }}
     - setuptools >=65
     - setuptools-scm >=6.2
     - pip
@@ -87,6 +87,7 @@ test:
     - simtools-validate-file-using-schema --help
     - simtools-validate-optics --help
   requires:
+    - python {{ python_min }}
     - pip
 
 about:
