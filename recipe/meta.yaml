@@ -1,5 +1,6 @@
 {% set name = "gammasimtools" %}
 {% set version = "0.8.2" %}
+{% set python_min = "3.11" %}
 
 package:
   name: {{ name|lower }}
@@ -35,19 +36,19 @@ build:
     - simtools-validate-optics = simtools.applications.validate_optics:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.9
+    - python {{ python_min }}
     - setuptools >=65
     - setuptools-scm >=6.2
     - pip
   run:
-    - python >=3.9
-    - astropy
+    - python >={{ python_min }}
+    - astropy-base
     - boost-histogram
-    - ctapipe
+    - ctapipe-base
     - eventio
     - jsonschema
     - matplotlib-base
@@ -86,6 +87,7 @@ test:
     - simtools-validate-file-using-schema --help
     - simtools-validate-optics --help
   requires:
+    - python {{ python_min }}
     - pip
 
 about:
