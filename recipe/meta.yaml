@@ -76,36 +76,36 @@ test:
     - simtools
   commands:
     - pip check
-    - simtools-calculate-trigger-rate -help
-    - simtools-convert-all-model-parameters-from-simtel -help
-    - simtools-convert-geo-coordinates-of-array-elements -help
-    - simtools-convert-model-parameter-from-simtel -help
-    - simtools-db-add-file-to-db -help
-    - simtools-db-add-model-parameters-from-repository-to-db -help
-    - simtools-db-add-value-from-json-to-db -help
-    - simtools-db-get-array-layouts-from-db -help
-    - simtools-db-get-file-from-db -help
-    - simtools-db-get-parameter-from-db -help
-    - simtools-db-inspect-databases -help
-    - simtools-derive-mirror-rnda -help
-    - simtools-derive-psf-parameters -help
-    - simtools-generate-array-config -help
-    - simtools-generate-corsika-histograms -help
-    - simtools-generate-default-metadata -help
-    - simtools-generate-regular-arrays -help
-    - simtools-generate-simtel-array-histograms -help
-    - simtools-plot-array-layout -help
-    - simtools-production-generate-simulation-config -help
+    - simtools-calculate-trigger-rate --help
+    - simtools-convert-all-model-parameters-from-simtel --help
+    - simtools-convert-geo-coordinates-of-array-elements --help
+    - simtools-convert-model-parameter-from-simtel --help
+    - simtools-db-add-file-to-db --help
+    - simtools-db-add-model-parameters-from-repository-to-db --help
+    - simtools-db-add-value-from-json-to-db --help
+    - simtools-db-get-array-layouts-from-db --help
+    - simtools-db-get-file-from-db --help
+    - simtools-db-get-parameter-from-db --help
+    - simtools-db-inspect-databases --help
+    - simtools-derive-mirror-rnda --help
+    - simtools-derive-psf-parameters --help
+    - simtools-generate-array-config --help
+    - simtools-generate-corsika-histograms --help
+    - simtools-generate-default-metadata --help
+    - simtools-generate-regular-arrays --help
+    - simtools-generate-simtel-array-histograms --help
+    - simtools-plot-array-layout --help
+    - simtools-production-generate-simulation-config --help
     - simtools-production-scale-events -help
-    - simtools-simulate-light-emission -help
-    - simtools-simulate-prod -help
-    - simtools-submit-data-from-external -help
-    - simtools-submit-model-parameter-from-external -help
-    - simtools-validate-camera-efficiency -help
-    - simtools-validate-camera-fov -help
-    - simtools-validate-cumulative-psf -help
-    - simtools-validate-file-using-schema -help
-    - simtools-validate-optics -help
+    - simtools-simulate-light-emission --help
+    - simtools-simulate-prod --help
+    - simtools-submit-data-from-external --help
+    - simtools-submit-model-parameter-from-external --help
+    - simtools-validate-camera-efficiency --help
+    - simtools-validate-camera-fov --help
+    - simtools-validate-cumulative-psf --help
+    - simtools-validate-file-using-schema --help
+    - simtools-validate-optics --help
   requires:
     - python {{ python_min }}
     - pip
