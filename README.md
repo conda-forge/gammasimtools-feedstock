@@ -145,4 +145,5 @@ Feedstock Maintainers
 
 * [@GernotMaier](https://github.com/GernotMaier/)
 * [@maxnoe](https://github.com/maxnoe/)
+* [@orelgueta](https://github.com/orelgueta/)
 
