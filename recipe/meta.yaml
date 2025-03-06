@@ -24,15 +24,21 @@ build:
     - simtools-db-get-parameter-from-db = simtools.applications.db_get_parameter_from_db:main
     - simtools-db-inspect-databases = simtools.applications.db_inspect_databases:main
     - simtools-derive-mirror-rnda = simtools.applications.derive_mirror_rnda:main
+    - simtools-derive-photon-electron-spectrum = simtools.applications.derive_photon_electron_spectrum:main
     - simtools-derive-psf-parameters = simtools.applications.derive_psf_parameters:main
+    - simtools-docs-produce-array-element-report = simtools.applications.docs_produce_array_element_report:main
+    - simtools-docs-produce-model-parameter-reports = simtools.applications.docs_produce_model_parameter_reports:main
     - simtools-generate-array-config = simtools.applications.generate_array_config:main
     - simtools-generate-corsika-histograms = simtools.applications.generate_corsika_histograms:main
     - simtools-generate-default-metadata = simtools.applications.generate_default_metadata:main
     - simtools-generate-regular-arrays = simtools.applications.generate_regular_arrays:main
     - simtools-generate-simtel-array-histograms = simtools.applications.generate_simtel_array_histograms:main
     - simtools-plot-array-layout = simtools.applications.plot_array_layout:main
+    - simtools-plot-tabular-data = simtools.applications.plot_tabular_data:main
+    - simtools-production-derive-limits = simtools.applications.production_derive_limits:main
     - simtools-production-generate-simulation-config = simtools.applications.production_generate_simulation_config:main
     - simtools-production-scale-events = simtools.applications.production_scale_events:main
+    - simtools-run-application = simtools.applications.run_application:main
     - simtools-simulate-light-emission = simtools.applications.simulate_light_emission:main
     - simtools-simulate-prod = simtools.applications.simulate_prod:main
     - simtools-simulate-prod-htcondor-generator = simtools.applications.simulate_prod_htcondor_generator:main
@@ -60,6 +66,7 @@ requirements:
     - ctao-dpps-cosmic-ray-spectra
     - ctapipe-base
     - eventio
+    - h5py
     - jsonschema
     - matplotlib-base
     - numpy
@@ -89,15 +96,21 @@ test:
     - simtools-db-get-parameter-from-db --help
     - simtools-db-inspect-databases --help
     - simtools-derive-mirror-rnda --help
+    - simtools-derive-photon-electron-spectrum --help
     - simtools-derive-psf-parameters --help
+    - simtools-docs-produce-array-element-report --help
+    - simtools-docs-produce-model-parameter-reports --help
     - simtools-generate-array-config --help
     - simtools-generate-corsika-histograms --help
     - simtools-generate-default-metadata --help
     - simtools-generate-regular-arrays --help
     - simtools-generate-simtel-array-histograms --help
     - simtools-plot-array-layout --help
+    - simtools-plot-tabular-data --help
+    - simtools-production-derive-limits --help
     - simtools-production-generate-simulation-config --help
     - simtools-production-scale-events -help
+    - simtools-run-application --help
     - simtools-simulate-light-emission --help
     - simtools-simulate-prod --help
     - simtools-simulate-prod-htcondor-generator --help
