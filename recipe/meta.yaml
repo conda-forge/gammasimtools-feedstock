@@ -1,5 +1,5 @@
 {% set name = "gammasimtools" %}
-{% set version = "0.11.0" %}
+{% set version = "0.12.0" %}
 {% set python_min = "3.11" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/gammasimtools-{{ version }}.tar.gz
-  sha256: f710e68d11d3acedff2372457553eda5141cf13503650e2879b7e3e121030684
+  sha256: c99de78c6ba685d445293d473c91df5b87f19c6ccca05a91723fdc756a29ef3f
 
 build:
   entry_points:
