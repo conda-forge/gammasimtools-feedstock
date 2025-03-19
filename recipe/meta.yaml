@@ -35,7 +35,7 @@ build:
     - simtools-generate-simtel-array-histograms = simtools.applications.generate_simtel_array_histograms:main
     - simtools-plot-array-layout = simtools.applications.plot_array_layout:main
     - simtools-plot-tabular-data = simtools.applications.plot_tabular_data:main
-    - simtools-production-derive-corsika-limits = simtools.application.production_derive_corsika_limits:main
+    - simtools-production-derive-corsika-limits = simtools.applications.production_derive_corsika_limits:main
     - simtools-production-extract-mc-event-data = simtools.applications.production_extract_mc_event_data:main
     - simtools-production-generate-simulation-config = simtools.applications.production_generate_simulation_config:main
     - simtools-production-scale-events = simtools.applications.production_scale_events:main
