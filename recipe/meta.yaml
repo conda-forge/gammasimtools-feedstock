@@ -1,5 +1,5 @@
 {% set name = "gammasimtools" %}
-{% set version = "0.12.0" %}
+{% set version = "0.13.0" %}
 {% set python_min = "3.11" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/gammasimtools-{{ version }}.tar.gz
-  sha256: c99de78c6ba685d445293d473c91df5b87f19c6ccca05a91723fdc756a29ef3f
+  sha256: 68f1dcc010a405a414dc22f7562acbb36bb27b29a3af408bcbfd9d5b6c7d11e1
 
 build:
   entry_points:
@@ -35,7 +35,8 @@ build:
     - simtools-generate-simtel-array-histograms = simtools.applications.generate_simtel_array_histograms:main
     - simtools-plot-array-layout = simtools.applications.plot_array_layout:main
     - simtools-plot-tabular-data = simtools.applications.plot_tabular_data:main
-    - simtools-production-derive-limits = simtools.applications.production_derive_limits:main
+    - simtools-production-derive-corsika-limits = simtools.applications.production_derive_corsika_limits:main
+    - simtools-production-extract-mc-event-data = simtools.applications.production_extract_mc_event_data:main
     - simtools-production-generate-simulation-config = simtools.applications.production_generate_simulation_config:main
     - simtools-production-scale-events = simtools.applications.production_scale_events:main
     - simtools-run-application = simtools.applications.run_application:main
@@ -107,8 +108,9 @@ test:
     - simtools-generate-simtel-array-histograms --help
     - simtools-plot-array-layout --help
     - simtools-plot-tabular-data --help
-    - simtools-production-derive-limits --help
+    - simtools-production-derive-corsika-limits --help
     - simtools-production-generate-simulation-config --help
+    - simtools-production-extract-mc-event-data --help
     - simtools-production-scale-events -help
     - simtools-run-application --help
     - simtools-simulate-light-emission --help
@@ -130,6 +132,8 @@ about:
   summary: Tools for the Simulation System of the CTA Observatory
   license: BSD-3-Clause
   license_file: LICENSE
+  description: |
+    Simulation tools and applications for the Cherenkov Telescope Array Observatory (CTAO).
 
 extra:
   recipe-maintainers:
