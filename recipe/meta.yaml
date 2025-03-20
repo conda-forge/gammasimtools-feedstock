@@ -133,7 +133,7 @@ about:
   license: BSD-3-Clause
   license_file: LICENSE
   description: |
-    Simulation tools and applications for the Cherenkov Telescope Array (CTAO).
+    Simulation tools and applications for the Cherenkov Telescope Array Observatory (CTAO).
 
 extra:
   recipe-maintainers:
