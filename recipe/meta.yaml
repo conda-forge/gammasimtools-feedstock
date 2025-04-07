@@ -23,6 +23,7 @@ build:
     - simtools-db-get-file-from-db = simtools.applications.db_get_file_from_db:main
     - simtools-db-get-parameter-from-db = simtools.applications.db_get_parameter_from_db:main
     - simtools-db-inspect-databases = simtools.applications.db_inspect_databases:main
+    - scripts.simtools-derive-ctao-array-layouts = simtools.applications.derive_ctao_array_layouts:main
     - simtools-derive-mirror-rnda = simtools.applications.derive_mirror_rnda:main
     - simtools-derive-photon-electron-spectrum = simtools.applications.derive_photon_electron_spectrum:main
     - simtools-derive-psf-parameters = simtools.applications.derive_psf_parameters:main
@@ -33,10 +34,11 @@ build:
     - simtools-generate-default-metadata = simtools.applications.generate_default_metadata:main
     - simtools-generate-regular-arrays = simtools.applications.generate_regular_arrays:main
     - simtools-generate-simtel-array-histograms = simtools.applications.generate_simtel_array_histograms:main
+    - simtools-generate-simtel-event-data = simtools.applications.generate_simtel_event_data:main
     - simtools-plot-array-layout = simtools.applications.plot_array_layout:main
     - simtools-plot-tabular-data = simtools.applications.plot_tabular_data:main
+    - simtools-print-version = simtools.applications.print_version:main
     - simtools-production-derive-corsika-limits = simtools.applications.production_derive_corsika_limits:main
-    - simtools-production-extract-mc-event-data = simtools.applications.production_extract_mc_event_data:main
     - simtools-production-generate-simulation-config = simtools.applications.production_generate_simulation_config:main
     - simtools-production-scale-events = simtools.applications.production_scale_events:main
     - simtools-run-application = simtools.applications.run_application:main
