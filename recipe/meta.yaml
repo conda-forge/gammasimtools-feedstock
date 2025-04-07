@@ -98,6 +98,7 @@ test:
     - simtools-db-get-file-from-db --help
     - simtools-db-get-parameter-from-db --help
     - simtools-db-inspect-databases --help
+    - scripts.simtools-derive-ctao-array-layouts --help
     - simtools-derive-mirror-rnda --help
     - simtools-derive-photon-electron-spectrum --help
     - simtools-derive-psf-parameters --help
@@ -108,11 +109,12 @@ test:
     - simtools-generate-default-metadata --help
     - simtools-generate-regular-arrays --help
     - simtools-generate-simtel-array-histograms --help
+    - simtools-generate-simtel-event-data --help
     - simtools-plot-array-layout --help
     - simtools-plot-tabular-data --help
+    - simtools-print-version --help
     - simtools-production-derive-corsika-limits --help
     - simtools-production-generate-simulation-config --help
-    - simtools-production-extract-mc-event-data --help
     - simtools-production-scale-events -help
     - simtools-run-application --help
     - simtools-simulate-light-emission --help
