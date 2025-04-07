@@ -9,6 +9,9 @@ Package license: BSD-3-Clause
 
 Summary: Tools for the Simulation System of the CTA Observatory
 
+Simulation tools and applications for the Cherenkov Telescope Array Observatory (CTAO).
+
+
 Current build status
 ====================
 

@@ -1,5 +1,5 @@
 {% set name = "gammasimtools" %}
-{% set version = "0.13.0" %}
+{% set version = "0.15.0" %}
 {% set python_min = "3.11" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/gammasimtools-{{ version }}.tar.gz
-  sha256: 68f1dcc010a405a414dc22f7562acbb36bb27b29a3af408bcbfd9d5b6c7d11e1
+  sha256: a51844b731f20896e58ee86eff06e3bf1aec4b0b4077a3d9f8009e5c74ddd197
 
 build:
   entry_points:
@@ -23,6 +23,7 @@ build:
     - simtools-db-get-file-from-db = simtools.applications.db_get_file_from_db:main
     - simtools-db-get-parameter-from-db = simtools.applications.db_get_parameter_from_db:main
     - simtools-db-inspect-databases = simtools.applications.db_inspect_databases:main
+    - scripts.simtools-derive-ctao-array-layouts = simtools.applications.derive_ctao_array_layouts:main
     - simtools-derive-mirror-rnda = simtools.applications.derive_mirror_rnda:main
     - simtools-derive-photon-electron-spectrum = simtools.applications.derive_photon_electron_spectrum:main
     - simtools-derive-psf-parameters = simtools.applications.derive_psf_parameters:main
@@ -33,10 +34,11 @@ build:
     - simtools-generate-default-metadata = simtools.applications.generate_default_metadata:main
     - simtools-generate-regular-arrays = simtools.applications.generate_regular_arrays:main
     - simtools-generate-simtel-array-histograms = simtools.applications.generate_simtel_array_histograms:main
+    - simtools-generate-simtel-event-data = simtools.applications.generate_simtel_event_data:main
     - simtools-plot-array-layout = simtools.applications.plot_array_layout:main
     - simtools-plot-tabular-data = simtools.applications.plot_tabular_data:main
+    - simtools-print-version = simtools.applications.print_version:main
     - simtools-production-derive-corsika-limits = simtools.applications.production_derive_corsika_limits:main
-    - simtools-production-extract-mc-event-data = simtools.applications.production_extract_mc_event_data:main
     - simtools-production-generate-simulation-config = simtools.applications.production_generate_simulation_config:main
     - simtools-production-scale-events = simtools.applications.production_scale_events:main
     - simtools-run-application = simtools.applications.run_application:main
@@ -96,6 +98,7 @@ test:
     - simtools-db-get-file-from-db --help
     - simtools-db-get-parameter-from-db --help
     - simtools-db-inspect-databases --help
+    - scripts.simtools-derive-ctao-array-layouts --help
     - simtools-derive-mirror-rnda --help
     - simtools-derive-photon-electron-spectrum --help
     - simtools-derive-psf-parameters --help
@@ -106,11 +109,12 @@ test:
     - simtools-generate-default-metadata --help
     - simtools-generate-regular-arrays --help
     - simtools-generate-simtel-array-histograms --help
+    - simtools-generate-simtel-event-data --help
     - simtools-plot-array-layout --help
     - simtools-plot-tabular-data --help
+    - simtools-print-version --help
     - simtools-production-derive-corsika-limits --help
     - simtools-production-generate-simulation-config --help
-    - simtools-production-extract-mc-event-data --help
     - simtools-production-scale-events -help
     - simtools-run-application --help
     - simtools-simulate-light-emission --help
