@@ -23,12 +23,13 @@ build:
     - simtools-db-get-file-from-db = simtools.applications.db_get_file_from_db:main
     - simtools-db-get-parameter-from-db = simtools.applications.db_get_parameter_from_db:main
     - simtools-db-inspect-databases = simtools.applications.db_inspect_databases:main
-    - scripts.simtools-derive-ctao-array-layouts = simtools.applications.derive_ctao_array_layouts:main
+    - simtools-derive-ctao-array-layouts = simtools.applications.derive_ctao_array_layouts:main
     - simtools-derive-mirror-rnda = simtools.applications.derive_mirror_rnda:main
     - simtools-derive-photon-electron-spectrum = simtools.applications.derive_photon_electron_spectrum:main
     - simtools-derive-psf-parameters = simtools.applications.derive_psf_parameters:main
     - simtools-docs-produce-array-element-report = simtools.applications.docs_produce_array_element_report:main
     - simtools-docs-produce-model-parameter-reports = simtools.applications.docs_produce_model_parameter_reports:main
+    - simtools-docs-produce-simulation-configuration-report = simtools.applications.docs_produce_simulation_configuration_report:main
     - simtools-docs-produce-calibration-reports = simtools.applications.docs_produce_calibration_reports:main
     - simtools-generate-array-config = simtools.applications.generate_array_config:main
     - simtools-generate-corsika-histograms = simtools.applications.generate_corsika_histograms:main
@@ -106,6 +107,7 @@ test:
     - simtools-derive-psf-parameters --help
     - simtools-docs-produce-array-element-report --help
     - simtools-docs-produce-model-parameter-reports --help
+    - simtools-docs-produce-simulation-configuration-report --help
     - simtools-docs-produce-calibration-reports --help
     - simtools-generate-array-config --help
     - simtools-generate-corsika-histograms --help
