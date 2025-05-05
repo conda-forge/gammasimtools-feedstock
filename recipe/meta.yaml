@@ -33,7 +33,7 @@ build:
     - simtools-generate-corsika-histograms = simtools.applications.generate_corsika_histograms:main
     - simtools-generate-default-metadata = simtools.applications.generate_default_metadata:main
     - simtools-generate-regular-arrays = simtools.applications.generate_regular_arrays:main
-    - simtools-generate-simtel-array-histograms = simtools.applications.generate_simtel_array_histograms:main
+    - simtools-generate-sim-telarray-histograms = simtools.applications.generate_sim_telarray_histograms:main
     - simtools-generate-simtel-event-data = simtools.applications.generate_simtel_event_data:main
     - simtools-plot-array-layout = simtools.applications.plot_array_layout:main
     - simtools-plot-tabular-data = simtools.applications.plot_tabular_data:main
@@ -108,7 +108,7 @@ test:
     - simtools-generate-corsika-histograms --help
     - simtools-generate-default-metadata --help
     - simtools-generate-regular-arrays --help
-    - simtools-generate-simtel-array-histograms --help
+    - simtools-generate-sim-telarray-histograms --help
     - simtools-generate-simtel-event-data --help
     - simtools-plot-array-layout --help
     - simtools-plot-tabular-data --help
