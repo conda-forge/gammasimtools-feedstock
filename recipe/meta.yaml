@@ -29,6 +29,7 @@ build:
     - simtools-derive-psf-parameters = simtools.applications.derive_psf_parameters:main
     - simtools-docs-produce-array-element-report = simtools.applications.docs_produce_array_element_report:main
     - simtools-docs-produce-model-parameter-reports = simtools.applications.docs_produce_model_parameter_reports:main
+    - simtools-docs-produce-calibration-reports = simtools.applications.docs_produce_calibration_reports:main
     - simtools-generate-array-config = simtools.applications.generate_array_config:main
     - simtools-generate-corsika-histograms = simtools.applications.generate_corsika_histograms:main
     - simtools-generate-default-metadata = simtools.applications.generate_default_metadata:main
@@ -105,6 +106,7 @@ test:
     - simtools-derive-psf-parameters --help
     - simtools-docs-produce-array-element-report --help
     - simtools-docs-produce-model-parameter-reports --help
+    - simtools-docs-produce-calibration-reports --help
     - simtools-generate-array-config --help
     - simtools-generate-corsika-histograms --help
     - simtools-generate-default-metadata --help
