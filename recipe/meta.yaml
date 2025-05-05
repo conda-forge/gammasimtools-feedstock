@@ -101,7 +101,7 @@ test:
     - simtools-db-get-file-from-db --help
     - simtools-db-get-parameter-from-db --help
     - simtools-db-inspect-databases --help
-    - scripts.simtools-derive-ctao-array-layouts --help
+    - simtools-derive-ctao-array-layouts --help
     - simtools-derive-mirror-rnda --help
     - simtools-derive-photon-electron-spectrum --help
     - simtools-derive-psf-parameters --help
