@@ -1,5 +1,5 @@
 {% set name = "gammasimtools" %}
-{% set version = "0.16.0" %}
+{% set version = "0.15.0" %}
 {% set python_min = "3.11" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/gammasimtools-{{ version }}.tar.gz
-  sha256: 4f297f285b4d9d9f8dd31d3944c6b15073883b6416e6ac12802f9c6d1c6642fa
+  sha256: a51844b731f20896e58ee86eff06e3bf1aec4b0b4077a3d9f8009e5c74ddd197
 
 build:
   entry_points:
@@ -33,7 +33,7 @@ build:
     - simtools-generate-corsika-histograms = simtools.applications.generate_corsika_histograms:main
     - simtools-generate-default-metadata = simtools.applications.generate_default_metadata:main
     - simtools-generate-regular-arrays = simtools.applications.generate_regular_arrays:main
-    - simtools-generate-simtel-array-histograms = simtools.applications.generate_simtel_array_histograms:main
+    - simtools-generate-sim-telarray-histograms = simtools.applications.generate_sim_telarray_histograms:main
     - simtools-generate-simtel-event-data = simtools.applications.generate_simtel_event_data:main
     - simtools-plot-array-layout = simtools.applications.plot_array_layout:main
     - simtools-plot-tabular-data = simtools.applications.plot_tabular_data:main
@@ -108,7 +108,7 @@ test:
     - simtools-generate-corsika-histograms --help
     - simtools-generate-default-metadata --help
     - simtools-generate-regular-arrays --help
-    - simtools-generate-simtel-array-histograms --help
+    - simtools-generate-sim-telarray-histograms --help
     - simtools-generate-simtel-event-data --help
     - simtools-plot-array-layout --help
     - simtools-plot-tabular-data --help
