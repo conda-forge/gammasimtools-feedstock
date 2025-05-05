@@ -28,9 +28,9 @@ build:
     - simtools-derive-photon-electron-spectrum = simtools.applications.derive_photon_electron_spectrum:main
     - simtools-derive-psf-parameters = simtools.applications.derive_psf_parameters:main
     - simtools-docs-produce-array-element-report = simtools.applications.docs_produce_array_element_report:main
+    - simtools-docs-produce-calibration-reports = simtools.applications.docs_produce_calibration_reports:main
     - simtools-docs-produce-model-parameter-reports = simtools.applications.docs_produce_model_parameter_reports:main
     - simtools-docs-produce-simulation-configuration-report = simtools.applications.docs_produce_simulation_configuration_report:main
-    - simtools-docs-produce-calibration-reports = simtools.applications.docs_produce_calibration_reports:main
     - simtools-generate-array-config = simtools.applications.generate_array_config:main
     - simtools-generate-corsika-histograms = simtools.applications.generate_corsika_histograms:main
     - simtools-generate-default-metadata = simtools.applications.generate_default_metadata:main
@@ -40,9 +40,9 @@ build:
     - simtools-plot-array-layout = simtools.applications.plot_array_layout:main
     - simtools-plot-tabular-data = simtools.applications.plot_tabular_data:main
     - simtools-print-version = simtools.applications.print_version:main
+    - simtools-production-derive-corsika-limits = simtools.applications.production_derive_corsika_limits:main
     - simtools-production-derive-statistics = simtools.applications.production_derive_statistics:main
     - simtools-production-generate-grid = simtools.applications.production_generate_grid:main
-    - simtools-production-derive-corsika-limits = simtools.applications.production_derive_corsika_limits:main
     - simtools-production-generate-simulation-config = simtools.applications.production_generate_simulation_config:main
     - simtools-run-application = simtools.applications.run_application:main
     - simtools-simulate-light-emission = simtools.applications.simulate_light_emission:main
@@ -72,7 +72,6 @@ requirements:
     - ctao-dpps-cosmic-ray-spectra
     - ctapipe-base
     - eventio
-    - h5py
     - jsonschema
     - matplotlib-base
     - numpy
@@ -106,9 +105,9 @@ test:
     - simtools-derive-photon-electron-spectrum --help
     - simtools-derive-psf-parameters --help
     - simtools-docs-produce-array-element-report --help
+    - simtools-docs-produce-calibration-reports --help
     - simtools-docs-produce-model-parameter-reports --help
     - simtools-docs-produce-simulation-configuration-report --help
-    - simtools-docs-produce-calibration-reports --help
     - simtools-generate-array-config --help
     - simtools-generate-corsika-histograms --help
     - simtools-generate-default-metadata --help
@@ -119,9 +118,9 @@ test:
     - simtools-plot-tabular-data --help
     - simtools-print-version --help
     - simtools-production-derive-corsika-limits --help
-    - simtools-production-generate-simulation-config --help
-    - simtools-production-generate-grid --help
     - simtools-production-derive-statistics --help
+    - simtools-production-generate-grid --help
+    - simtools-production-generate-simulation-config --help
     - simtools-run-application --help
     - simtools-simulate-light-emission --help
     - simtools-simulate-prod --help
