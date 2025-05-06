@@ -1,5 +1,5 @@
 {% set name = "gammasimtools" %}
-{% set version = "0.15.0" %}
+{% set version = "0.16.0" %}
 {% set python_min = "3.11" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/gammasimtools-{{ version }}.tar.gz
-  sha256: a51844b731f20896e58ee86eff06e3bf1aec4b0b4077a3d9f8009e5c74ddd197
+  sha256: 4f297f285b4d9d9f8dd31d3944c6b15073883b6416e6ac12802f9c6d1c6642fa
 
 build:
   entry_points:
@@ -23,12 +23,14 @@ build:
     - simtools-db-get-file-from-db = simtools.applications.db_get_file_from_db:main
     - simtools-db-get-parameter-from-db = simtools.applications.db_get_parameter_from_db:main
     - simtools-db-inspect-databases = simtools.applications.db_inspect_databases:main
-    - scripts.simtools-derive-ctao-array-layouts = simtools.applications.derive_ctao_array_layouts:main
+    - simtools-derive-ctao-array-layouts = simtools.applications.derive_ctao_array_layouts:main
     - simtools-derive-mirror-rnda = simtools.applications.derive_mirror_rnda:main
     - simtools-derive-photon-electron-spectrum = simtools.applications.derive_photon_electron_spectrum:main
     - simtools-derive-psf-parameters = simtools.applications.derive_psf_parameters:main
     - simtools-docs-produce-array-element-report = simtools.applications.docs_produce_array_element_report:main
+    - simtools-docs-produce-calibration-reports = simtools.applications.docs_produce_calibration_reports:main
     - simtools-docs-produce-model-parameter-reports = simtools.applications.docs_produce_model_parameter_reports:main
+    - simtools-docs-produce-simulation-configuration-report = simtools.applications.docs_produce_simulation_configuration_report:main
     - simtools-generate-array-config = simtools.applications.generate_array_config:main
     - simtools-generate-corsika-histograms = simtools.applications.generate_corsika_histograms:main
     - simtools-generate-default-metadata = simtools.applications.generate_default_metadata:main
@@ -39,8 +41,9 @@ build:
     - simtools-plot-tabular-data = simtools.applications.plot_tabular_data:main
     - simtools-print-version = simtools.applications.print_version:main
     - simtools-production-derive-corsika-limits = simtools.applications.production_derive_corsika_limits:main
+    - simtools-production-derive-statistics = simtools.applications.production_derive_statistics:main
+    - simtools-production-generate-grid = simtools.applications.production_generate_grid:main
     - simtools-production-generate-simulation-config = simtools.applications.production_generate_simulation_config:main
-    - simtools-production-scale-events = simtools.applications.production_scale_events:main
     - simtools-run-application = simtools.applications.run_application:main
     - simtools-simulate-light-emission = simtools.applications.simulate_light_emission:main
     - simtools-simulate-prod = simtools.applications.simulate_prod:main
@@ -69,7 +72,6 @@ requirements:
     - ctao-dpps-cosmic-ray-spectra
     - ctapipe-base
     - eventio
-    - h5py
     - jsonschema
     - matplotlib-base
     - numpy
@@ -78,7 +80,6 @@ requirements:
     - pyproj
     - python-dotenv
     - pyyaml
-    - pytest
     - scipy
     - toml
 
@@ -98,12 +99,14 @@ test:
     - simtools-db-get-file-from-db --help
     - simtools-db-get-parameter-from-db --help
     - simtools-db-inspect-databases --help
-    - scripts.simtools-derive-ctao-array-layouts --help
+    - simtools-derive-ctao-array-layouts --help
     - simtools-derive-mirror-rnda --help
     - simtools-derive-photon-electron-spectrum --help
     - simtools-derive-psf-parameters --help
     - simtools-docs-produce-array-element-report --help
+    - simtools-docs-produce-calibration-reports --help
     - simtools-docs-produce-model-parameter-reports --help
+    - simtools-docs-produce-simulation-configuration-report --help
     - simtools-generate-array-config --help
     - simtools-generate-corsika-histograms --help
     - simtools-generate-default-metadata --help
@@ -114,8 +117,9 @@ test:
     - simtools-plot-tabular-data --help
     - simtools-print-version --help
     - simtools-production-derive-corsika-limits --help
+    - simtools-production-derive-statistics --help
+    - simtools-production-generate-grid --help
     - simtools-production-generate-simulation-config --help
-    - simtools-production-scale-events -help
     - simtools-run-application --help
     - simtools-simulate-light-emission --help
     - simtools-simulate-prod --help
