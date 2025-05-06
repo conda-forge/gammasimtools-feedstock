@@ -80,7 +80,6 @@ requirements:
     - pyproj
     - python-dotenv
     - pyyaml
-    - pytest
     - scipy
     - toml
 
