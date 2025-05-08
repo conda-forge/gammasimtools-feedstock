@@ -11,6 +11,7 @@ source:
   sha256: 4f297f285b4d9d9f8dd31d3944c6b15073883b6416e6ac12802f9c6d1c6642fa
 
 build:
+  number: 1
   entry_points:
     - simtools-calculate-trigger-rate = simtools.applications.calculate_trigger_rate:main
     - simtools-convert-all-model-parameters-from-simtel = simtools.applications.convert_all_model_parameters_from_simtel:main
