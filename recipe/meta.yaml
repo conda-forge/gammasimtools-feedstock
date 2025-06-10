@@ -57,7 +57,7 @@ build:
     - simtools-validate-optics = simtools.applications.validate_optics:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
