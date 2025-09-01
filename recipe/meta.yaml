@@ -54,7 +54,7 @@ build:
     - simtools-run-application = simtools.applications.run_application:main
     - simtools-simulate-calibration-events = simtools.applications.simulate_calibration_events:main
     - simtools-simulate-flasher = simtools.applications.simulate_flasher:main
-    - simtools-simulate-light-emission = simtools.applications.simulate_light_emission:main
+    - simtools-simulate-illuminator = simtools.applications.simulate_illuminator:main
     - simtools-simulate-prod = simtools.applications.simulate_prod:main
     - simtools-simulate-prod-htcondor-generator = simtools.applications.simulate_prod_htcondor_generator:main
     - simtools-submit-array-layouts = simtools.applications.submit_array_layouts:main
@@ -142,7 +142,7 @@ test:
     - simtools-run-application --help
     - simtools-simulate-calibration-events --help
     - simtools-simulate-flasher --help
-    - simtools-simulate-light-emission --help
+    - simtools-simulate-illuminator --help
     - simtools-simulate-prod --help
     - simtools-simulate-prod-htcondor-generator --help
     - simtools-submit-array-layouts --help
