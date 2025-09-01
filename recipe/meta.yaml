@@ -67,7 +67,7 @@ build:
     - simtools-validate-optics = simtools.applications.validate_optics:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -76,7 +76,7 @@ requirements:
     - setuptools-scm >=6.2
     - pip
   run:
-    - astropy
+    - astropy-base
     - ctapipe
     - python >={{ python_min }}
     - astropy-base
