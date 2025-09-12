@@ -1,5 +1,5 @@
 {% set name = "gammasimtools" %}
-{% set version = "0.19.0" %}
+{% set version = "0.20.0" %}
 {% set python_min = "3.11" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/gammasimtools-{{ version }}.tar.gz
-  sha256: 299e41c9af8928b4e4c01e2ca88b00053f4109bb22654361ad85752d1aee8347
+  sha256: 0256e3c08acd4bdc0d0168bc57259a7e06155f3d7dcb791eacfe8ebf90fa3b90
 
 build:
   entry_points:
@@ -67,7 +67,7 @@ build:
     - simtools-validate-optics = simtools.applications.validate_optics:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
@@ -76,6 +76,7 @@ requirements:
     - setuptools-scm >=6.2
     - pip
   run:
+    - astropy
     - astropy-base
     - ctapipe
     - python >={{ python_min }}
