@@ -12,7 +12,7 @@ source:
 
 build:
   entry_points:
-    - simtools-calculate-trigger-rate = simtools.applications.calculate_trigger_rate:main
+    - simtools-calculate-incident-angles = simtools.applications.calculate_incident_angles:main
     - simtools-convert-all-model-parameters-from-simtel = simtools.applications.convert_all_model_parameters_from_simtel:main
     - simtools-convert-geo-coordinates-of-array-elements = simtools.applications.convert_geo_coordinates_of_array_elements:main
     - simtools-convert-model-parameter-from-simtel = simtools.applications.convert_model_parameter_from_simtel:main
@@ -28,6 +28,7 @@ build:
     - simtools-derive-mirror-rnda = simtools.applications.derive_mirror_rnda:main
     - simtools-derive-photon-electron-spectrum = simtools.applications.derive_photon_electron_spectrum:main
     - simtools-derive-psf-parameters = simtools.applications.derive_psf_parameters:main
+    - simtools-derive-trigger-rates = simtools.applications.derive_trigger_rates:main
     - simtools-docs-produce-array-element-report = simtools.applications.docs_produce_array_element_report:main
     - simtools-docs-produce-calibration-reports = simtools.applications.docs_produce_calibration_reports:main
     - simtools-docs-produce-model-parameter-reports = simtools.applications.docs_produce_model_parameter_reports:main
@@ -36,9 +37,8 @@ build:
     - simtools-generate-corsika-histograms = simtools.applications.generate_corsika_histograms:main
     - simtools-generate-default-metadata = simtools.applications.generate_default_metadata:main
     - simtools-generate-regular-arrays = simtools.applications.generate_regular_arrays:main
-    - simtools-generate-sim-telarray-histograms = simtools.applications.generate_sim_telarray_histograms:main
     - simtools-generate-simtel-event-data = simtools.applications.generate_simtel_event_data:main
-    - simtools-maintain-simulation-model-add-production-table  = simtools.applications.maintain_simulation_model_add_production_table:main
+    - simtools-maintain-simulation-model-add-production-table = simtools.applications.maintain_simulation_model_add_production_table:main
     - simtools-maintain-simulation-model-compare-productions = simtools.applications.maintain_simulation_model_compare_productions:main
     - simtools-maintain-simulation-model-verify-production-tables = simtools.applications.maintain_simulation_model_verify_production_tables:main
     - simtools-merge-tables = simtools.applications.merge_tables:main
@@ -73,17 +73,14 @@ requirements:
   host:
     - python {{ python_min }}
     - setuptools >=65
-    - setuptools-scm >=6.2
+    - setuptools-scm >=8
     - pip
   run:
     - astropy
-    - astropy-base
-    - ctapipe
     - python >={{ python_min }}
-    - astropy-base
     - boost-histogram
     - ctao-dpps-cosmic-ray-spectra
-    - ctapipe-base
+    - ctapipe
     - eventio
     - h5py
     - jsonschema
@@ -102,13 +99,14 @@ test:
     - simtools
   commands:
     - pip check
-    - simtools-calculate-trigger-rate --help
+    - simtools-calculate-incident-angles --help
     - simtools-convert-all-model-parameters-from-simtel --help
     - simtools-convert-geo-coordinates-of-array-elements --help
     - simtools-convert-model-parameter-from-simtel --help
     - simtools-db-add-file-to-db --help
     - simtools-db-add-simulation-model-from-repository-to-db --help
     - simtools-db-add-value-from-json-to-db --help
+    - simtools-db-generate-compound-indexes --help
     - simtools-db-get-array-layouts-from-db --help
     - simtools-db-get-file-from-db --help
     - simtools-db-generate-compound-indexes --help
@@ -118,6 +116,7 @@ test:
     - simtools-derive-mirror-rnda --help
     - simtools-derive-photon-electron-spectrum --help
     - simtools-derive-psf-parameters --help
+    - simtools-derive-trigger-rates --help
     - simtools-docs-produce-array-element-report --help
     - simtools-docs-produce-calibration-reports --help
     - simtools-docs-produce-model-parameter-reports --help
@@ -126,13 +125,13 @@ test:
     - simtools-generate-corsika-histograms --help
     - simtools-generate-default-metadata --help
     - simtools-generate-regular-arrays --help
-    - simtools-generate-sim-telarray-histograms --help
     - simtools-generate-simtel-event-data --help
     - simtools-maintain-simulation-model-add-production-table --help
     - simtools-maintain-simulation-model-compare-productions --help
     - simtools-maintain-simulation-model-verify-production-tables --help
     - simtools-merge-tables --help
     - simtools-plot-array-layout --help
+    - simtools-plot-simtel-events --help
     - simtools-plot-tabular-data --help
     - simtools-plot-tabular-data-for-model-parameter --help
     - simtools-print-version --help
