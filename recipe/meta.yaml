@@ -24,6 +24,7 @@ build:
     - simtools-db-get-file-from-db = simtools.applications.db_get_file_from_db:main
     - simtools-db-get-parameter-from-db = simtools.applications.db_get_parameter_from_db:main
     - simtools-db-inspect-databases = simtools.applications.db_inspect_databases:main
+    - simtools-db-upload-model-repository = simtools.applications.db_upload_model_repository:main
     - simtools-derive-ctao-array-layouts = simtools.applications.derive_ctao_array_layouts:main
     - simtools-derive-mirror-rnda = simtools.applications.derive_mirror_rnda:main
     - simtools-derive-photon-electron-spectrum = simtools.applications.derive_photon_electron_spectrum:main
@@ -52,9 +53,9 @@ build:
     - simtools-production-generate-grid = simtools.applications.production_generate_grid:main
     - simtools-production-merge-corsika-limits = simtools.applications.production_merge_corsika_limits:main
     - simtools-run-application = simtools.applications.run_application:main
-    - simtools-simulate-calibration-events = simtools.applications.simulate_calibration_events:main
     - simtools-simulate-flasher = simtools.applications.simulate_flasher:main
     - simtools-simulate-illuminator = simtools.applications.simulate_illuminator:main
+    - simtools-simulate-pedestals = simtools.applications.simulate_pedestals:main
     - simtools-simulate-prod = simtools.applications.simulate_prod:main
     - simtools-simulate-prod-htcondor-generator = simtools.applications.simulate_prod_htcondor_generator:main
     - simtools-submit-array-layouts = simtools.applications.submit_array_layouts:main
