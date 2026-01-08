@@ -1,6 +1,5 @@
 {% set name = "gammasimtools" %}
-{% set version = "0.20.0" %}
-{% set python_min = "3.11" %}
+{% set version = "0.26.0" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/gammasimtools-{{ version }}.tar.gz
-  sha256: 0256e3c08acd4bdc0d0168bc57259a7e06155f3d7dcb791eacfe8ebf90fa3b90
+  sha256: 62c06c1cea6e73a5fb091fa9ebfadd71dc1a401809ad41577f21dd643829ecde
 
 build:
   entry_points:
@@ -24,10 +23,12 @@ build:
     - simtools-db-get-file-from-db = simtools.applications.db_get_file_from_db:main
     - simtools-db-get-parameter-from-db = simtools.applications.db_get_parameter_from_db:main
     - simtools-db-inspect-databases = simtools.applications.db_inspect_databases:main
+    - simtools-db-upload-model-repository = simtools.applications.db_upload_model_repository:main
     - simtools-derive-ctao-array-layouts = simtools.applications.derive_ctao_array_layouts:main
     - simtools-derive-mirror-rnda = simtools.applications.derive_mirror_rnda:main
     - simtools-derive-photon-electron-spectrum = simtools.applications.derive_photon_electron_spectrum:main
     - simtools-derive-psf-parameters = simtools.applications.derive_psf_parameters:main
+    - simtools-derive-pulse-shape-parameters = simtools.applications.derive_pulse_shape_parameters:main
     - simtools-derive-trigger-rates = simtools.applications.derive_trigger_rates:main
     - simtools-docs-produce-array-element-report = simtools.applications.docs_produce_array_element_report:main
     - simtools-docs-produce-calibration-reports = simtools.applications.docs_produce_calibration_reports:main
@@ -38,23 +39,24 @@ build:
     - simtools-generate-default-metadata = simtools.applications.generate_default_metadata:main
     - simtools-generate-regular-arrays = simtools.applications.generate_regular_arrays:main
     - simtools-generate-simtel-event-data = simtools.applications.generate_simtel_event_data:main
-    - simtools-maintain-simulation-model-add-production-table = simtools.applications.maintain_simulation_model_add_production_table:main
+    - simtools-maintain-simulation-model-add-production = simtools.applications.maintain_simulation_model_add_production:main
     - simtools-maintain-simulation-model-compare-productions = simtools.applications.maintain_simulation_model_compare_productions:main
     - simtools-maintain-simulation-model-verify-production-tables = simtools.applications.maintain_simulation_model_verify_production_tables:main
+    - simtools-maintain-simulation-model-write-array-element-positions = simtools.applications.maintain_simulation_model_write_array_element_positions:main
     - simtools-merge-tables = simtools.applications.merge_tables:main
     - simtools-plot-array-layout = simtools.applications.plot_array_layout:main
     - simtools-plot-simtel-events = simtools.applications.plot_simtel_events:main
+    - simtools-plot-simulated-event-distributions = simtools.applications.plot_simulated_event_distributions:main
     - simtools-plot-tabular-data = simtools.applications.plot_tabular_data:main
     - simtools-plot-tabular-data-for-model-parameter = simtools.applications.plot_tabular_data_for_model_parameter:main
-    - simtools-print-version = simtools.applications.print_version:main
     - simtools-production-derive-corsika-limits = simtools.applications.production_derive_corsika_limits:main
     - simtools-production-derive-statistics = simtools.applications.production_derive_statistics:main
     - simtools-production-generate-grid = simtools.applications.production_generate_grid:main
     - simtools-production-merge-corsika-limits = simtools.applications.production_merge_corsika_limits:main
     - simtools-run-application = simtools.applications.run_application:main
-    - simtools-simulate-calibration-events = simtools.applications.simulate_calibration_events:main
     - simtools-simulate-flasher = simtools.applications.simulate_flasher:main
     - simtools-simulate-illuminator = simtools.applications.simulate_illuminator:main
+    - simtools-simulate-pedestals = simtools.applications.simulate_pedestals:main
     - simtools-simulate-prod = simtools.applications.simulate_prod:main
     - simtools-simulate-prod-htcondor-generator = simtools.applications.simulate_prod_htcondor_generator:main
     - simtools-submit-array-layouts = simtools.applications.submit_array_layouts:main
@@ -71,13 +73,14 @@ build:
 
 requirements:
   host:
-    - python {{ python_min }}
-    - setuptools >=65
+    - python >=3.12
+    - setuptools >=64
     - setuptools-scm >=8
     - pip
   run:
+    - python >=3.12
+    - adjusttext
     - astropy
-    - python >={{ python_min }}
     - boost-histogram
     - ctao-dpps-cosmic-ray-spectra
     - ctapipe
@@ -109,13 +112,14 @@ test:
     - simtools-db-generate-compound-indexes --help
     - simtools-db-get-array-layouts-from-db --help
     - simtools-db-get-file-from-db --help
-    - simtools-db-generate-compound-indexes --help
     - simtools-db-get-parameter-from-db --help
     - simtools-db-inspect-databases --help
+    - simtools-db-upload-model-repository --help
     - simtools-derive-ctao-array-layouts --help
     - simtools-derive-mirror-rnda --help
     - simtools-derive-photon-electron-spectrum --help
     - simtools-derive-psf-parameters --help
+    - simtools-derive-pulse-shape-parameters --help
     - simtools-derive-trigger-rates --help
     - simtools-docs-produce-array-element-report --help
     - simtools-docs-produce-calibration-reports --help
@@ -126,23 +130,24 @@ test:
     - simtools-generate-default-metadata --help
     - simtools-generate-regular-arrays --help
     - simtools-generate-simtel-event-data --help
-    - simtools-maintain-simulation-model-add-production-table --help
+    - simtools-maintain-simulation-model-add-production --help
     - simtools-maintain-simulation-model-compare-productions --help
     - simtools-maintain-simulation-model-verify-production-tables --help
+    - simtools-maintain-simulation-model-write-array-element-positions --help
     - simtools-merge-tables --help
     - simtools-plot-array-layout --help
     - simtools-plot-simtel-events --help
+    - simtools-plot-simulated-event-distributions --help
     - simtools-plot-tabular-data --help
     - simtools-plot-tabular-data-for-model-parameter --help
-    - simtools-print-version --help
     - simtools-production-derive-corsika-limits --help
     - simtools-production-derive-statistics --help
     - simtools-production-generate-grid --help
     - simtools-production-merge-corsika-limits --help
     - simtools-run-application --help
-    - simtools-simulate-calibration-events --help
     - simtools-simulate-flasher --help
     - simtools-simulate-illuminator --help
+    - simtools-simulate-pedestals --help
     - simtools-simulate-prod --help
     - simtools-simulate-prod-htcondor-generator --help
     - simtools-submit-array-layouts --help
@@ -154,7 +159,6 @@ test:
     - simtools-validate-file-using-schema --help
     - simtools-validate-optics --help
   requires:
-    - python {{ python_min }}
     - pip
 
 about:
