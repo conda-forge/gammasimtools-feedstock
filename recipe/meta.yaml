@@ -1,5 +1,5 @@
 {% set name = "gammasimtools" %}
-{% set version = "0.20.0" %}
+{% set version = "0.26.0" %}
 {% set python_min = "3.11" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/gammasimtools-{{ version }}.tar.gz
-  sha256: 0256e3c08acd4bdc0d0168bc57259a7e06155f3d7dcb791eacfe8ebf90fa3b90
+  sha256: 62c06c1cea6e73a5fb091fa9ebfadd71dc1a401809ad41577f21dd643829ecde
 
 build:
   entry_points:
@@ -76,6 +76,7 @@ requirements:
     - setuptools-scm >=8
     - pip
   run:
+    - adjusttext
     - astropy
     - python >={{ python_min }}
     - boost-histogram
