@@ -1,17 +1,15 @@
-{% set name = "gammasimtools" %}
-{% set version = "0.26.0" %}
+{% set version = "0.28.0" %}
 
 package:
-  name: {{ name|lower }}
+  name: gammasimtools
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/gammasimtools-{{ version }}.tar.gz
-  sha256: 62c06c1cea6e73a5fb091fa9ebfadd71dc1a401809ad41577f21dd643829ecde
+  url: https://pypi.org/packages/source/g/gammasimtools/gammasimtools-{{ version }}.tar.gz
+  sha256: 2bb10a8d0125769d3a1c79f3bb077a0f9a1989e120751bd02751f2889cb96038
 
 build:
   entry_points:
-    - simtools-calculate-incident-angles = simtools.applications.calculate_incident_angles:main
     - simtools-convert-all-model-parameters-from-simtel = simtools.applications.convert_all_model_parameters_from_simtel:main
     - simtools-convert-geo-coordinates-of-array-elements = simtools.applications.convert_geo_coordinates_of_array_elements:main
     - simtools-convert-model-parameter-from-simtel = simtools.applications.convert_model_parameter_from_simtel:main
@@ -25,6 +23,7 @@ build:
     - simtools-db-inspect-databases = simtools.applications.db_inspect_databases:main
     - simtools-db-upload-model-repository = simtools.applications.db_upload_model_repository:main
     - simtools-derive-ctao-array-layouts = simtools.applications.derive_ctao_array_layouts:main
+    - simtools-derive-incident-angle = simtools.applications.derive_incident_angle:main
     - simtools-derive-mirror-rnda = simtools.applications.derive_mirror_rnda:main
     - simtools-derive-photon-electron-spectrum = simtools.applications.derive_photon_electron_spectrum:main
     - simtools-derive-psf-parameters = simtools.applications.derive_psf_parameters:main
@@ -80,10 +79,9 @@ requirements:
   run:
     - python >=3.12
     - adjusttext
-    - astropy
+    - astropy-base
     - boost-histogram
     - ctao-dpps-cosmic-ray-spectra
-    - ctapipe
     - eventio
     - h5py
     - jsonschema
@@ -101,8 +99,8 @@ test:
   imports:
     - simtools
   commands:
+    - conda list
     - pip check
-    - simtools-calculate-incident-angles --help
     - simtools-convert-all-model-parameters-from-simtel --help
     - simtools-convert-geo-coordinates-of-array-elements --help
     - simtools-convert-model-parameter-from-simtel --help
@@ -116,6 +114,7 @@ test:
     - simtools-db-inspect-databases --help
     - simtools-db-upload-model-repository --help
     - simtools-derive-ctao-array-layouts --help
+    - simtools-derive-incident-angle --help
     - simtools-derive-mirror-rnda --help
     - simtools-derive-photon-electron-spectrum --help
     - simtools-derive-psf-parameters --help
@@ -160,6 +159,7 @@ test:
     - simtools-validate-optics --help
   requires:
     - pip
+    - python
 
 about:
   home: https://github.com/gammasim/simtools
@@ -171,6 +171,4 @@ about:
 
 extra:
   recipe-maintainers:
-    - orelgueta
     - GernotMaier
-    - maxnoe
