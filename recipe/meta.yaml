@@ -77,7 +77,6 @@ requirements:
     - setuptools-scm >=8
     - pip
   run:
-    - astropy
     - python >=3.12
     - adjusttext
     - astropy-base
