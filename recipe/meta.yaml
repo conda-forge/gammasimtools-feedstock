@@ -1,4 +1,4 @@
-{% set version = "0.29.0" %}
+{% set version = "0.33.0" %}
 
 package:
   name: gammasimtools
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/g/gammasimtools/gammasimtools-{{ version }}.tar.gz
-  sha256: a17123689f7718e4aa4a7c4c261abda3bd38c9343c7844b119ed7485ddca587a
+  sha256: 0aa214dce77b83af691e4daea6c8926c5286a11757fd4c68adefd0458087641d
 
 build:
   entry_points:
@@ -77,6 +77,8 @@ requirements:
     - setuptools-scm >=8
     - pip
   run:
+    - astropy
+    - uuid6
     - python >=3.12
     - adjusttext
     - astropy-base
